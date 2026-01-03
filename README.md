@@ -74,5 +74,4 @@ py --version
 ```bash
 pip install yt-dlp
 
-
 ## FFmpeg (Required)
