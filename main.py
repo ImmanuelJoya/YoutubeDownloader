@@ -110,14 +110,17 @@ class YouTubeDownloaderApp:
             views = f"{info.get('view_count', 0):,}"
             likes = info.get("like_count", "Not available")
             uploader = info.get("uploader", "Unknown")
+            dislikes = info.get("dislike_count", "Not available")
+            thumbnail_url = info.get("thumbnail", "https://placehold.co/200x200?text=No+Thumbnail")
 
             text = (
                 f"Title: {title}\n"
                 f"Duration: {duration}\n"
                 f"Views: {views}\n"
                 f"Likes: {likes}\n"
-                f"Dislikes: Not available\n"
+                f"Dislikes: {dislikes}\n"
                 f"Channel: {uploader}\n"
+                f"Thumbnail URL: {thumbnail_url}\n"
             )
 
             self.root.after(0, self.set_info, text)
