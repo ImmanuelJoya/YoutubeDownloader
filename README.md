@@ -50,6 +50,7 @@ Built using **Tkinter** for the GUI and **yt-dlp** for reliable YouTube extracti
 
 ## 📁 Project Structure
 
+```bash
 YouTubeDownloader/
 │
 ├── main.py
@@ -57,7 +58,7 @@ YouTubeDownloader/
 ├── downloads/
 │ └── (downloaded files)
 └── assets/
-
+```
 ---
 
 ## ⚙️ Requirements
