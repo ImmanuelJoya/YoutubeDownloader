@@ -20,15 +20,14 @@ class MainView:
         self._apply_modern_theme()
         self._bind_accessibility()
 
-    # =========================
+    
     # Controller Binding
-    # =========================
+    
     def set_controller(self, controller):
         self.controller = controller
 
-    # =========================
     # UI Construction
-    # =========================
+    
     def _build_ui(self):
         # Main container
         self.main = tk.Frame(self.root, bg="#0a0a0a")
