@@ -89,3 +89,8 @@ pip install yt-dlp
 ```
 ## FFmpeg (Required)
 
+## Future Updates
+- Access from terminal
+- Download Spotify audio
+- Download history
+
