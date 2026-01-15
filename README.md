@@ -91,6 +91,6 @@ pip install yt-dlp
 
 ## Future Updates
 - Access from terminal
-- Download Spotify audio
+- Compatibility to download Spotify audio
 - Download history
 
