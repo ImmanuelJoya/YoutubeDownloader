@@ -12,9 +12,9 @@ class AppController:
             try:
                 info = self.model.fetch_info(url)
                 self.view.root.after(0, self.view.update_video_info, info)
-                self.view.root.after(0, self.view.log_status, "✅ Info fetched")
+                self.view.root.after(0, self.view.log_status, " Info fetched")
             except Exception as e:
-                self.view.root.after(0, self.view.log_status, f"❌ {e}")
+                self.view.root.after(0, self.view.log_status, f" {e}")
             finally:
                 self.view.root.after(0, self.view.enable_fetch)
 
