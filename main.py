@@ -363,7 +363,7 @@ class YouTubeDownloaderApp:
             font=("Segoe UI", 16, "bold"), bg="#1a1a1a", fg="white", anchor="w")
         self.likes_value.pack(anchor="w")
         
-        self.likes_label = tk.Label(likes_box, text="👍 Likes", 
+        self.likes_label = tk.Label(likes_box, text=" Likes", 
             font=("Segoe UI", 9), bg="#1a1a1a", fg="#9ca3af", anchor="w")
         self.likes_label.pack(anchor="w")
         
@@ -468,10 +468,10 @@ class YouTubeDownloaderApp:
             self.root.after(0, self.comments_value.config, {"text": format_number(info.get('comment_count'))})
             
             self.root.after(0, self.set_thumbnail, info.get("thumbnail"))
-            self.root.after(0, self.log_status, f"✅ Fetched: {info.get('title')}")
+            self.root.after(0, self.log_status, f" Fetched: {info.get('title')}")
 
         except Exception as e:
-            self.root.after(0, self.log_status, f"❌ Error: {e}")
+            self.root.after(0, self.log_status, f" Error: {e}")
 
         finally:
             self.root.after(0, lambda: self.fetch_btn.config(state="normal"))
@@ -514,7 +514,7 @@ class YouTubeDownloaderApp:
 
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                 info = ydl.extract_info(url, download=True)
-                self.root.after(0, self.log_status, f"✅ Downloaded: {info.get('title')}")
+                self.root.after(0, self.log_status, f" Downloaded: {info.get('title')}")
                 
                 # Keep info displayed after download
                 if not self.video_info:
@@ -528,7 +528,7 @@ class YouTubeDownloaderApp:
                     self.root.after(0, self.set_thumbnail, info.get("thumbnail"))
 
         except Exception as e:
-            self.root.after(0, self.log_status, f"❌ Error: {e}")
+            self.root.after(0, self.log_status, f" Error: {e}")
 
         finally:
             self.root.after(0, lambda: self.download_btn.config(state="normal"))
