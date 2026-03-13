@@ -26,9 +26,9 @@ class AppController:
                 self.view.root.after(0, self.view.reset_progress)
                 info = self.model.download(url, ydl_opts)
                 self.view.root.after(0, self.view.update_video_info, info)
-                self.view.root.after(0, self.view.log_status, "✅ Download complete")
+                self.view.root.after(0, self.view.log_status, " Download complete")
             except Exception as e:
-                self.view.root.after(0, self.view.log_status, f"❌ {e}")
+                self.view.root.after(0, self.view.log_status, f" {e}")
             finally:
                 self.view.root.after(0, self.view.enable_download)
 
