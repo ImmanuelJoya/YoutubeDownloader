@@ -3,7 +3,7 @@ from tkinter import ttk, messagebox
 from PIL import Image, ImageTk
 import urllib.request
 import io
-
+ 
 from utils.formatters import format_duration, format_number
 
 
