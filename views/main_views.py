@@ -29,11 +29,11 @@ class MainView:
     # UI Construction
     
     def _build_ui(self):
-        # Main container
+        # MainContainer
         self.main = tk.Frame(self.root, bg="#0a0a0a")
         self.main.pack(fill="both", expand=True, padx=30, pady=30)
 
-        # Header
+        # Header section
         header = tk.Frame(self.main, bg="#0a0a0a")
         header.pack(fill="x", pady=(0, 30))
 
@@ -71,9 +71,8 @@ class MainView:
         self._build_left_panel()
         self._build_right_panel()
 
-    # =========================
+    
     # Left Panel
-    # =========================
     def _build_left_panel(self):
         # URL
         url_label = tk.Label(
